@@ -1,0 +1,35 @@
+<nav class="navbar is-primary">
+  <div class="navbar-brand">
+    <a class="navbar-item">
+      <img src="assets/imgs/logo.png" />
+    </a>
+
+    <a
+      role="button"
+      class="navbar-burger burger"
+      aria-label="menu"
+      data-target="navMenu"
+      [ngClass]="{'is-active': navMenuStatus}"
+      (click)="onNavMenu()"
+    >
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navMenu" class="navbar-menu" [ngClass]="{'is-active': navMenuStatus}">
+    <div class="navbar-end">
+      <a class="navbar-item" [routerLink]="['/home']" routerLinkActive="is-active">
+        Home
+      </a>
+      <a class="navbar-item" [routerLink]="['/pets']" routerLinkActive="is-active" >
+        Mascotas
+      </a>
+      <a class="navbar-item" [routerLink]="['/institutions']" routerLinkActive="is-active" >
+        Instituciones
+      </a>
+    </div>
+  </div>
+</nav>
+
